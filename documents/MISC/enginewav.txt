@@ -1,0 +1,79 @@
+These are the sound requests embedded in the Q2 engine. I examined the
+demo0404 sound set to see what ID sounds we might still be using accidently.
+
+1) These files are requested in the engine, and have corresponding LUC sounds
+in place, even if they're silent.
+
+player/land1.wav
+player/step1.wav
+player/step2.wav
+player/step3.wav
+player/step4.wav
+player/fall1.wav
+player/fall2.wav
+world/spark7.wav
+world/spark6.wav
+world/spark5.wav
+weapons/blastf1a.wav
+
+2) These files are requested in the engine, and have NO corresponding LUC sounds
+in place, not even a silent replacement. We run the risk of triggering one of these.
+Sometimes Q2 uses a sound for something completely different than what the sound is named.
+
+weapons/bfg__f1y.wav
+weapons/grenlr1b.wav
+weapons/grenlf1a.wav
+weapons/rocklr1b.wav
+weapons/rocklf1a.wav
+weapons/railgf1a.wav
+weapons/machgf1b.wav
+weapons/machgf2b.wav
+weapons/machgf3b.wav
+weapons/machgf4b.wav
+weapons/machgf5b.wav
+weapons/sshotf1b.wav
+weapons/shotgr1b.wav
+weapons/shotgf1b.wav
+weapons/hyprbf1a.wav
+boss3/xfire.wav
+makron/blaster.wav
+gunner/gunatck3.wav
+tank/rocket.wav
+tank/tnkatck1.wav
+chick/chkatck2.wav
+tank/tnkatk2%c.wav
+tank/tnkatck3.wav
+soldier/solatck1.wav
+floater/fltatck1.wav
+hover/hovatck1.wav
+medic/medatck1.wav
+flyer/flyatck3.wav
+soldier/solatck2.wav
+infantry/infatck1.wav
+gunner/gunatck2.wav
+soldier/solatck3.wav
+*fall1.wav (probably taken from the qbase2/players gender directories)
+*fall2.wav (probably taken from the qbase2/players gender directories)
+misc/tele1.wav
+items/respawn1.wav
+weapons/xpld_wat.wav
+weapons/grenlx1a.wav
+weapons/rocklx1a.wav
+weapons/lashit.wav
+world/ric3.wav
+world/ric2.wav
+world/ric1.wav
+
+3) These files are requested in the engine, but don't appear in the Q2 pak. I don't
+think we need LUC replacements because they're probably never really called.
+
+weapons/disint2.wav
+weapons/shotg2.wav
+weapons/nail1.wav
+weapons/rippfire.wav
+weapons/plasshot.wav
+weapons/disrupthit.wav
+weapons/tesla.wav
+
+
+

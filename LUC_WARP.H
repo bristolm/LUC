@@ -1,0 +1,1 @@
+extern qboolean Warp_Use(edict_t *ent);

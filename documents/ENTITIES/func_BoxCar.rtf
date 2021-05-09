@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f39\froman\fcharset238\fprq2 Times New Roman CE;}{\f40\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f42\froman\fcharset161\fprq2 Times New Roman Greek;}{\f43\froman\fcharset162\fprq2 Times New Roman Tur;}{\f44\froman\fcharset186\fprq2 Times New Roman Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}{\s1\keepn\widctlpar\adjustright \b\i \sbasedon0 \snext0 heading 1;}{\s2\keepn\widctlpar\adjustright \b \sbasedon0 \snext0 heading 2;}{
+\s3\keepn\widctlpar\adjustright \b\fs28 \sbasedon0 \snext0 heading 3;}{\*\cs10 \additive Default Paragraph Font;}}{\*\listtable{\list\listtemplateid67698711\listsimple{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'02\'00);}{\levelnumbers\'01;}\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid145517085}{\list\listtemplateid67698711\listsimple{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'02\'00);}{\levelnumbers\'01;}\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid363792519}}{\*\listoverridetable{\listoverride\listid145517085\listoverridecount0\ls1}{\listoverride\listid363792519\listoverridecount0\ls2}}{\*\revtbl {Unknown;}{Rand Phares;}{Andrea Phares;}}{\info
+{\title func_BoxCar Design Spec}{\author Rand Phares}{\operator drake o'brien}{\creatim\yr1999\mo11\dy23\min32}{\revtim\yr1999\mo11\dy23\min32}{\version2}{\edmins0}{\nofpages3}{\nofwords869}{\nofchars4954}{\nofcharsws6083}{\vern113}}
+\widowctrl\ftnbj\aenddoc\revisions\formshade\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}
+{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain 
+\widctlpar\adjustright \fs20\cgrid {\b\fs32\cgrid0 func_BoxCar Design Spec}{\b\fs32\revised\revauth1\revdttm-969499678\cgrid0  }{\b\revised\revauth1\revdttm-969499678\cgrid0 (Rev 2)}{\b\fs32\cgrid0 
+\par }{\fs24\cgrid0 
+\par }\pard\plain \s1\keepn\widctlpar\outlinelevel0\adjustright \b\i {\i0\fs28 Intro
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 We\rquote 
+d like to be able to hit a change-level switch or trigger brush that would transport the player and everything inside a defined space to an identical space in the next level. All states, relative locations, and velocities will be preserved.
+\par 
+\par The new entity }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0  will satisfy this request.
+\par 
+\par }\pard\plain \s2\keepn\widctlpar\outlinelevel1\adjustright \b {\i\fs28 target_changelevel}{\fs28  entity
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 An entity to change levels already exists (}{\i\fs24\cgrid0 target_changelevel}{\fs24\cgrid0 ). By extending the ability of this entity, we can use it to trigger the desired effect. Add a 
+\ldblquote target\rdblquote  key with the name of the }{\i\fs24\cgrid0 func_BoxCar }{\fs24\cgrid0 entity, and when the }{\i\fs24\cgrid0 target_changelevel}{\fs24\cgrid0  is triggered, we invoke the code to use the }{\i\fs24\cgrid0 func_BoxCar}{
+\fs24\cgrid0 . If \ldblquote target\rdblquote  is empty, }{\i\fs24\cgrid0 target_changelevel}{\fs24\cgrid0  moves the player to the next level\rquote s }{\i\fs24\cgrid0 info_player_start}{\fs24\cgrid0  as it did before.
+\par 
+\par }{\b\i\fs28\cgrid0 func_BoxCar}{\b\fs28\cgrid0  entity
+\par }{\fs24\cgrid0 This has a \ldblquote targetname\rdblquote  key so it can be triggered. Its \ldblquote targetname\rdblquote  should match the \ldblquote targetname\rdblquote  of an identically-sized and -oriented }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 
+ in the destination level. Identically-oriented means it has the same x,y,z dimensions.
+\par 
+\par When }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0  is used (triggered/invoked), it searches through the edict list for all entities that have been marked with the FL_PASSENGER flag (in entity.flag). This indicates that the edict is a }{\i\fs24\cgrid0 
+candidate}{\fs24\cgrid0  passenger, and is set for all edict types that we want to travel with the player. Any that are inside the bounds of the func_BoxCar are added to a passenger list (BoxCar_Passengers, an array of edict_t\rquote 
+s). When an edict is added, the following occurs:
+\par 
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 a)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls1
+\ls1\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc1\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr1\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 
+edict contents are copied to a seat in the BoxCar_Passengers array
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 b)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls1
+\ls1\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc2\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr2\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 
+the original edict is marked as being a passenger
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 c)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls1
+\ls1\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc3\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr3\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 
+any edict pointers that point to other edicts are cleared if the pointed-to edict is not a passenger
+\par }\pard \widctlpar\adjustright {\fs24\cgrid0 
+\par The first slot in the passenger list is reserved for a dummy edict with the following information, needed when everyone reaches the  destination level:
+\par 
+\par \tab func_BoxCar.targetname \endash  so we can find the destination func_BoxCar
+\par \tab the number of passengers \endash  how many tickets we sold
+\par \tab current level.time \endash  for determining new thinktimes for thinking edicts
+\par \tab func_BoxCar.absmin \endash  to get the relative placement correct
+\par 
+\par The boundaries of the func_BoxCar should\endash as much as possible\endash align with solid brushes to eliminate things like a supervisor inside the }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0  who is restoring health to a monster outside the }{
+\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 . Supervisor transports, monster doesn't.
+\par 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \b\fs28 {Passengers
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 The following edicts can be passengers:
+\par 
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 a)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls2
+\ls2\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc1\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr1\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 
+all monsters except turrets, which are considered part of the scenery
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 b)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls2
+\ls2\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc2\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr2\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 all items
+
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 c)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls2
+\ls2\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc3\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr3\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 all players
+
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 d)\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pnlcltr\pnstart1\pnindent360\pnhang{\pntxta )}}\ls2
+\ls2\pnrauth2\pnrdate-969499684\pnrstart0\pnrxst2\pnrxst0\pnrxst0\pnrxst0\pnrxst41\pnrxst0\pnrstop6\pnrstart1\pnrrgb1\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrrgb0\pnrstop9\pnrstart2\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0
+\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc4\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrnfc0\pnrstop18\pnrstart3\pnrpnbr4\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0
+\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrpnbr0\pnrstop36\adjustright {\fs24\cgrid0 
+helperbots (eventually)
+\par }\pard \widctlpar\adjustright {\fs24\cgrid0 
+\par Anything else--like ramping lights, switched lights, target_speakers,waypoints,player trails,etc.\emdash are not transported. Keep these things out of the }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 
+ and you should be able to preserve the "seamlessness" of the transition.
+\par 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \b\fs28 {Arrival
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 The new level is loaded in the normal manner, and all edicts defined for the level are spawned and baselined. The destination }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 
+ is located. There is no checking for orientation or size, so make sure you\rquote ve matched it to the originating }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 .
+\par 
+\par In the case of players, edict slots already exist, and the player\rquote s passenger data is copied into those slots. Since the player will be spawned at his relative position w/in the }{\i\fs24\cgrid0 func_BoxCar}{\fs24\cgrid0 , an }{\i\fs24\cgrid0 
+info_player_start}{\fs24\cgrid0  in the destination level will be ignored.
+\par 
+\par In the case of every other passenger, new edicts are spawned, and the passenger data is copied into those new edicts.
+\par 
+\par }{\fs24\revised\revauth1\revdttm-969499680\cgrid0 For all edicts, the origin, absmin, and absmax coordinates are adjusted relative to the destination }{\i\fs24\revised\revauth1\revdttm-969499680\cgrid0 func_BoxCar}{
+\fs24\revised\revauth1\revdttm-969499680\cgrid0 . Some edicts use pos1 as coordinates, and some use it as relative distance or angles. For those that use pos1 as coordinates, pos1 has to be adjusted also.
+\par }{\deleted\fs24\revised\revauth2\revdttm-969499684\revauthdel1\revdttmdel-969499680\cgrid0 For all edicts, the origin, absmin, and absmax coordinates are adjusted relative to the destination }{
+\i\deleted\fs24\revised\revauth2\revdttm-969499684\revauthdel1\revdttmdel-969499680\cgrid0 func_BoxCar}{\deleted\fs24\revised\revauth2\revdttm-969499684\revauthdel1\revdttmdel-969499680\cgrid0 . Some edicts use pos1 as coordinates, a
+nd some use it as relative distance or angles. For those that use pos1 as coordinates, pos1 has to be adjusted also.
+\par }{\deleted\fs24\revauthdel2\revdttmdel-969499684\cgrid0 For all edicts, the origin, absmin, and absmax coordinates are adjusted relative to the destination }{\i\deleted\fs24\revauthdel2\revdttmdel-969499684\cgrid0 func_BoxCar}{
+\deleted\fs24\revauthdel2\revdttmdel-969499684\cgrid0 . Some edicts use pos1 as coordinates, and some use it as relative distance or angles. For those that use pos1 as coordinates, pos1 has to be adjusted also.
+\par }{\fs24\cgrid0 
+\par For all thinking edicts, the next think time (entity.nextthink) is set relative to the level.time of the new level. Pointers to other passengers are set to the new locations of those passengers\rquote  edicts.
+\par 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \b\fs28 {Models
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 Models are indexed in the engine, in the order in which the code references them. The world model is always index 1. Any brushes with models attached (i.e. }{\i\fs24\cgrid0 func_doors}{
+\fs24\cgrid0 ) get indexed next. Then come the edict models. After all models are indexed, the engine uses the indices to quickly determine what model should be displayed in what location.
+\par 
+\par Since the number of brush models can vary from level to level, the index that gets a
+ssociated with a particular edict type can vary from level to level. So the passenger model indices from the old level are no good when the passengers arrive at the new level. To re-index the models in the new map, each passenger needs to know where its m
+odels are located. This information is not stored in the edicts, so it has to be added. There is already an entity.model field that is used for brush models, but unused for edicts. It\rquote 
+s used to point to a string that defines the directory location of the edict\rquote s model. When a passenger arrives at the destination, this string is used to re-index the model.
+\par 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \b\fs28 {Sounds
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 Sounds are also indexed, and may exhibit the same problem as models. This is not yet known at this time. The fix would be similar to the model fix.
+\par 
+\par }\pard\plain \s2\keepn\widctlpar\outlinelevel1\adjustright \b {\fs28 Cross-Level Triggers
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24\cgrid0 Not researched yet. My guess is that this is a non-issue, since the level-exiting and level-entering code for func_BoxCar use is the same as for regular exit/entry.
+\par 
+\par }{\b\fs28\cgrid0 Misc.
+\par }{\fs24\cgrid0 Since the origination and destination areas should be as identical as possible, the level author should avoid any environmental effects that are variable (i.e. ramping lights).
+\par 
+\par 
+\par 
+\par }{
+\par }}

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5BE86FB-024C-4FA6-9009-CF10697B1C86}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\game.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\game.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\game.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>\Games\Quake2\demo\gamex86.dll</OutputFile>
+      <ImportLibrary>.\Release\gamex86.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\game.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\game.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\game.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>\Games\Quake2\demo\gamex86.dll</OutputFile>
+      <ImportLibrary>.\Debug\gamex86.lib</ImportLibrary>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="g_ai.c" />
+    <ClCompile Include="g_chase.c" />
+    <ClCompile Include="g_cmds.c" />
+    <ClCompile Include="g_combat.c" />
+    <ClCompile Include="g_func.c" />
+    <ClCompile Include="g_items.c" />
+    <ClCompile Include="g_main.c" />
+    <ClCompile Include="g_misc.c" />
+    <ClCompile Include="g_monster.c" />
+    <ClCompile Include="g_phys.c" />
+    <ClCompile Include="g_save.c" />
+    <ClCompile Include="g_spawn.c" />
+    <ClCompile Include="g_svcmds.c" />
+    <ClCompile Include="g_target.c" />
+    <ClCompile Include="g_trigger.c" />
+    <ClCompile Include="g_utils.c" />
+    <ClCompile Include="g_weapon.c" />
+    <ClCompile Include="luc_beetle.c" />
+    <ClCompile Include="luc_blastdamage.c" />
+    <ClCompile Include="luc_decoy.c" />
+    <ClCompile Include="luc_g_bubbles.c" />
+    <ClCompile Include="luc_g_func.c" />
+    <ClCompile Include="luc_g_local.c" />
+    <ClCompile Include="luc_g_misc.c" />
+    <ClCompile Include="luc_g_miscbots.c" />
+    <ClCompile Include="luc_g_sprite.c" />
+    <ClCompile Include="luc_g_weapon.c" />
+    <ClCompile Include="luc_hbot.c" />
+    <ClCompile Include="luc_m_ambush.c" />
+    <ClCompile Include="luc_m_battle.c" />
+    <ClCompile Include="luc_m_bot.c" />
+    <ClCompile Include="luc_m_bot_wbeam.c" />
+    <ClCompile Include="luc_m_bot_wclaw.c" />
+    <ClCompile Include="luc_m_bot_wcoil.c" />
+    <ClCompile Include="luc_m_fatman.c" />
+    <ClCompile Include="luc_m_gbot.c" />
+    <ClCompile Include="luc_m_gwhite.c" />
+    <ClCompile Include="luc_m_gwhite_ext.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="luc_m_jelly.c" />
+    <ClCompile Include="luc_m_kelp.c" />
+    <ClCompile Include="luc_m_littleboy.c" />
+    <ClCompile Include="luc_m_repeater.c" />
+    <ClCompile Include="luc_m_supervisor.c" />
+    <ClCompile Include="luc_m_turret_s.c" />
+    <ClCompile Include="luc_powerups.c" />
+    <ClCompile Include="luc_teleporter.c" />
+    <ClCompile Include="luc_utils.c" />
+    <ClCompile Include="luc_warp.c" />
+    <ClCompile Include="m_flash.c" />
+    <ClCompile Include="m_move.c" />
+    <ClCompile Include="p_client.c" />
+    <ClCompile Include="p_hud.c" />
+    <ClCompile Include="p_trail.c" />
+    <ClCompile Include="p_view.c" />
+    <ClCompile Include="p_weapon.c" />
+    <ClCompile Include="q_shared.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="game.def" />
+    <CustomBuild Include="game.dsp" />
+    <CustomBuild Include="game.dsw" />
+    <CustomBuild Include="game.opt" />
+    <CustomBuild Include="resource.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game.h" />
+    <ClInclude Include="g_local.h" />
+    <ClInclude Include="luc_blastdamage.h" />
+    <ClInclude Include="luc_decoy.h" />
+    <ClInclude Include="luc_g_local.h" />
+    <ClInclude Include="luc_hbot.h" />
+    <ClInclude Include="luc_m_ambush.h" />
+    <ClInclude Include="luc_m_battle.h" />
+    <ClInclude Include="luc_m_botframes.h" />
+    <ClInclude Include="luc_m_bots.h" />
+    <ClInclude Include="luc_m_fatman.h" />
+    <ClInclude Include="luc_m_gbot.h" />
+    <ClInclude Include="luc_m_gwhite.h" />
+    <ClInclude Include="luc_m_gwhite_ext.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="luc_m_repeater.h" />
+    <ClInclude Include="luc_m_supervisor.h" />
+    <ClInclude Include="luc_m_turret_s.h" />
+    <ClInclude Include="luc_powerups.h" />
+    <ClInclude Include="luc_teleporter.h" />
+    <ClInclude Include="luc_warp.h" />
+    <ClInclude Include="m_player.h" />
+    <ClInclude Include="q_shared.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

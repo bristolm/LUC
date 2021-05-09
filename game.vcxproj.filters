@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d75ecf23-342c-440b-ab66-f618f186ffc3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9529cbc4-891a-4fa2-ab4b-ab49c41a32ba}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6eecfe8e-b5b5-4e69-9a60-69168e552f73}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="g_ai.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_chase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_cmds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_combat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_func.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_items.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_monster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_phys.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_save.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_spawn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_svcmds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_target.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_trigger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="g_weapon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_beetle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_blastdamage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_decoy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_bubbles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_func.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_local.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_misc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_miscbots.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_sprite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_g_weapon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_hbot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_ambush.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_battle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_bot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_bot_wbeam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_bot_wclaw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_bot_wcoil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_fatman.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_gbot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_gwhite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_gwhite_ext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_jelly.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_kelp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_littleboy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_repeater.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_supervisor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_m_turret_s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_powerups.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_teleporter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="luc_warp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="m_flash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="m_move.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_hud.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_trail.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_view.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p_weapon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="q_shared.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="g_local.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_blastdamage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_decoy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_g_local.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_hbot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_ambush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_battle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_botframes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_bots.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_fatman.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_gbot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_gwhite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_gwhite_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_repeater.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_supervisor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_m_turret_s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_powerups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_teleporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="luc_warp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="m_player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="q_shared.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="game.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="game.dsp" />
+    <CustomBuild Include="game.dsw" />
+    <CustomBuild Include="game.opt" />
+    <CustomBuild Include="resource.aps" />
+  </ItemGroup>
+</Project>

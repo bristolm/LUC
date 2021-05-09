@@ -1,0 +1,123 @@
+func_speaker_sequencer
+----------------------
+This thing got pretty complex so I'm going to put the docs into 2 sections.
+But first here's a detail of the spawnflags.
+
+Spawnflags :
+------------
+START_ON - Spawn the f_s_s already turned on.
+SINGLE_SPEAKER_MODE - Use Single Speaker Mode
+SSM_RELIABLE - Only used in SSM. Sets all the speakers it spawns to use
+               the reliable spawnflag.
+SSM_LOOP_NOISE - Only used in SSM. Sets the speakers it spawns to use the
+                 LOOPED_OFF spawnflag, so the sound will loop until the
+                 next sound is triggered.
+SSM_OVERLAP - Only used in SSM. Spawns 1 speaker for every sound in the
+              sequence so the specified times can overlap. To help reduce
+              any snaps and pops that accompany sound playing...
+
+Notes on spawnflags :
+(1) Any SSM spawnflags are ignored if the SSM spawnflag isn't set.
+(2) If both SSM_LOOP_NOISE and SSM_OVERLAP spawnflags are set, you're
+    probably going to get some odd results as the sound at each speaker
+    will keep looping until a sound is triggered at that speaker again.
+    I can keep this from happening by ignoring the SSM_LOOP_NOISE
+    flag if both are set but I thought it might have some purpose to
+    some of you inventive map designers.
+
+
+- MSM : Multi Speaker Mode (aka, Regular mode, aka Non-SSM) 
+- SSM : Single Speaker Mode
+
+MSM
+---
+The map designer places as many speakers as they like, each with their own
+sound, volume, attenuations, etc... and the func_speaker_sequencer triggers
+them. A random_style field makes the speakers get triggered in random 
+orders.
+
+Key/Value Pairs :
+-----------------
+speakers - List of speakers to activate 
+times - Time to wait before triggering the next speaker
+random_style - Any non 0 (zero) integer value will trigger a random speaker
+               in the list.
+
+Misc. Notes:
+------------
+(1) if you replace speaker names with any valid target name, the target
+    will be triggered. It doesn't have to just be speakers. Be creative.
+
+
+SSM
+---
+The map designer places as many speakers as they like (the settings do not
+matter as they will be overwritten by the func_speaker_sequencer) or
+they place no speakers and the func_speaker_sequencer spawns them 
+based on the the SSM_Overlap spawnflag. If multiple speakers are specified,
+the sequence is played once at each specified speaker. A random_style field
+alters the what sounds are played or which speaker a sequence is played at.
+
+Key/Value Pairs :
+-----------------
+speakers - List of speakers to play sequences at. If none are listed,
+           it/they are spawned for you. If more then 1 is listed and
+           the random_style field is set to 0 or 2, the sequence will
+           alternate between the specified speakers.
+times - List of times to wait before triggering the next sound
+noises - List of wav files to play.
+attenuations - Attenuation
+   -1 = none, send to whole level
+    1 = normal fighting sounds
+    2 = idle sound level
+    3 = ambient sound level
+volumes - Volume 0.0 to 1.0
+random_style - Set random behavior.
+                   0 = No random behavior.
+                   1 = Random Speaker - Play a sequence at a random speaker
+                   2 = Random Sound - Play a random sound in the sequence
+                       at the current speaker
+                   3 = Random Both - Play a random sound at a random speaker
+
+Notes on Key/Value pairs:
+-------------------------
+(1) The speakers, times, noises, attenuations, and volumes expect a comma
+    seperated list of strings with NO spaces (or any other whitespace 
+    characters (such as tabs, etc)). So, if you have 3 speakers you want
+    a sequencer to alternate sequences at called spkl, spk2, and spk3, the
+    speakers value would be : "spk1,spk2,spk3" (NO QUOTES)
+(2) The sounds list is the "controller" in SSM. So, a sequence is designated
+    by the number of sounds in that list. For example, if you have 3 sounds
+    in the list, the sequence is 3 sounds long. When a sequence alternates
+    between multiple speakers, they alternate after the sequence has been
+    played at the current speaker.
+(3) The sequencer keeps track of how many items are in the times,
+    attenuations, and volumes list. You do NOT need to have the same number
+    of values in these lists as you have in the sounds list. The sequencer
+    will increment the current item for each of these lists everytime it
+    plays a noise. If the the item counter exceeds the number of items in
+    the list, it is reset to the first item in the list. So, if you have
+    a sequencer with 3 sounds in the sequence and have 2 times in the times
+    list, the first sound will play, the sequencer will wait as long as
+    the first time specifies, the second sound plays, the sequencer waits
+    as long as the second time specifies, the third sound plays and the
+    the sequencer is back to waiting to time specified by the first time.
+    The same is true for volumes and attenuations.
+(4) If you don't specify any times a default time of 1 will be set as the
+    times list (see #3 for ramifications)
+(5) If you don't specify any volumes a default volume of 1 will be set as
+    the volumes list (see #3 for ramifications)
+(6) If you don't specify any attenuations a default attenuation of 3 will
+    be set as the attenuations list (see #3 for ramifications). Attenuation
+    3 is ambiant sound level.
+
+Misc. Notes:
+------------
+(1) If you want speakers to be spawned for you you must leave the speakers
+    field empty, if you supply 1 speaker, you must supply ALL the speakers
+    you want to use.
+(2) If speakers are spawned for you, they all start off with lucjbm,
+    followed by a number indicating the order they are spawned (same as the
+    list of noises in most cases if not all), followed by 5-8 random
+    lowercase letters so speakers spawned by multiple sequencers in a level
+    should not bump into each other.

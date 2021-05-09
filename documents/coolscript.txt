@@ -1,0 +1,31 @@
+USE {    			// Player pressed a button to activate this script
+     set TARGET laser1          // == while ( ent = FindTargets("laser1") ) {...
+     set message "112 N-_A 2"   // With my new laser, this causes it to ramp from color
+                                //     126 to 112 over time and then sit at 112 (light blue) forever
+     TRIGGER                    // The laser has to be turned on ('use'd)
+}
+TIME 1.5 {                      // The ramp above takes 1.4 seconds to complete
+     set TARGET laser1		// 'target' a laser with targetname=laser1
+     set message "112 N 0"      // Lock the color in ... just cuz is all
+     set TARGET laser_main      // 'target' a different laser with targetname=laser_main
+     set message "112 N 0"      // Color it the same color
+     TRIGGER                    // This turns on the 'laser_main'
+}          
+USE {                           // Player pressed a button that activates this script
+     set TARGET laser2          // 'target' the last laser
+     set message "64 N-_A 2"    // Ramp laser color from 78 - 64 (red)
+     TRIGGER                    // Turn it on
+}
+TIME 0.1 {
+     set TARGET laser_main
+     toggle message "64 N-_A 2", "112 N 0", "112 N 0"  // Make it flicker between the 2 colors
+} 15      // Do this 15 times - each time in, it 'sets' with the 'next'
+          // toggle value - so toggle is to limit nesting <source block>s :)
+TIME 0.1 {
+     set TARGET laser_main
+     set message "177 A 0"   // Set it to a nice purple
+     flag spawnflags 64      // Make it a fat laser [ probably could 'set' a width variable, but
+                             // I wanted to use a <flag statement>
+}                            // Now it just ends - since there is no outer loop with a REPEAT value, 
+                             // the func_lucscript could free itself here, I suppose - I think there 
+                             // is an edict limit.

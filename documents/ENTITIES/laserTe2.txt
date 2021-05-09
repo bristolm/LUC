@@ -1,0 +1,80 @@
+/*QUAKED target_laser (0 .5 .8) (-8 -8 -8) (8 8 8) START_ON RED GREEN BLUE YELLOW ORANGE FAT BOUND
+When triggered, fires a laser.  You can either set a target
+or a direction.
+
+"message"   String defining the custom laser colors.  String format is as follows:
+  	 <palette start> <palette end> <flicker delta>
+	Setting this message will SUPERIMPOSE its settings over the various RED GREEN .. color flags
+*/
+
+07/19/98 Mike Bristol
+This is sort of a beta 'peak' at what I thought could be done with laser colors.
+
+NOTE:  To avoid odd results, PLEASE provide all 3 portions of the 'message' 
+	- I didn't do much negative testing!
+
+Background - color of a laser is determined by the palette index provided to it by the code.  The
+RED, BLUE, GREEN flags on the target_laser just mask that.  I'm not sure - I've only allowed you
+access to 2 of these colors for now - when I use all 4, the laser just looks murkier.  There is
+talk of an 'outer' and an 'inner' color, but I can't figure out the difference.  It's like they 
+fade from one to the other, but they do it in an icky way.
+
+Parameters:
+To active the color cycling options of the target_laser entity, the first 
+thing you have to do is add the 'message' parameter to the object.  In BSP, this means
+selecting the light, hitting that little [+] button and filling in the top blank with 'message'.
+This 'message' is interpreted as follows (I kind of mimiced the lightramp entity) - the engine
+expects 3 separate values in the second blank there:
+	1) The starting palette index for the colors.  This can also be interpreted as the 
+           LOWEST palette index you will be using.
+	2) Color Ramp - A character string that represents the changes to the color over time
+           Acceptable values are a-z, A-Z, -, _ , and *
+	3) A flicker 'delta' value.  This is a positive number which will be applied to 
+           generate some 'flicker'.  The real color is depentant on the activity of the BOUND flag, 
+
+BOUND flag (optional) - I added a flag (128) to the target_laser.  This can be checked by checking off the
+box just under the FAT checkbox.
+... I'll try and explain how thess work below.
+
+Tutorial [yeah!  Lke that word ain't an over statement!]:
+Ok, say we want to make a light that pulses between bright blue and dark blue.
+Open the LUC palette up somewhere (like by opening a picture in PSP and doing Colors->Edit Palette)
+There is a good blue band between 112(bright blue) and 126(dark blue) - we can use that.  Lets say
+we are ramping up from dark to light, back to dark, and then finally back up to light (while 
+flickering) and maybe we want to end out with a pure, blue beam.
+
+1) Starting color - The lowest palette position is 112.   112
+2) Color Ramp - The letters work out to numbers.  A...Z = +0...+25 and a...z = +26...+51
+                Since we are going from dark @ 126 (112+14) to light @ 112 (112+0)
+		the string works out to be NMLKJIHGFEDCBA or just N-A since it is a smooth ramp.
+		To ramp back down we just tack on -N to go back.  Since we want to end out at the 
+		light end, we need another -N, so the final value is N-A-N-A.  To kill the 
+		flickering, stick a * in there somewhere, and to prevent the colors from 
+		cycling back (until the laser is turned back on again) add a _.  Let's say we
+		want a final clean blue pulse that ends a little less than brightest.
+		Our final string would look something like:
+			N-A-N-A*BCD_C
+		The beam would stay at C (126 + 2) until it was turned off.  Each 'step' is
+		.1 seconds, so that sequence above would take about 5 seconds to hit the 'pure'
+		blue state.
+
+3) Flicker - Flicker represents an added value that the engine can apply every now and then.
+             If you don't want to bother, set it to 0.  Setting it to a number ABOVE 0 works
+             as follows:
+              - if the BOUND flag is set, then the added number must stay inside the boundaries
+                set by the Color Ramp.  In out example, if we checked BOUND and used 2 a flicker
+                value, the color it would flicker to would be 2 'places' in front of the current color
+                according to the color ramp.  So, with a color ramp of:
+                     N-A-N-A*BCD_C    [NMLKJIHGFEDCBABCDEFGHIJKLMNMLKJIHGFEDCBABCDCCC...]
+                the BOUND flicker color would follow:
+                     L-A-L-A-C        [LKJIHGFEDCBABCDEFGHIJKLMNMLKJIHGFEDCBABC] (<- cutoff from '*')
+              - if BOUND is not set, the flicker color can go outside the color ramp, so with our ramp:
+                     N-A-N-A*BCD_C    [NMLKJIHGFEDCBABCDEFGHIJKLMNMLKJIHGFEDCBABCDCCC...]
+                the unBOUNDflicker color would follow:
+                     P-C-P-C          [PONMLKJIHGFEDCDEFGHIJKLMNOPONMLKJIHGFEDC]
+
+Our final string is:
+	112 N-A-N-A*BCD_C 2
+
+Examples:
+I've provided a map (mikelaz.bsp) that demonstrates a few lasers.

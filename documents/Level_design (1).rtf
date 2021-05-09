@@ -1,0 +1,291 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+{\f15\fswiss\fcharset0\fprq2{\*\panose 020b0604030504040204}Tahoma;}{\f16\froman\fcharset238\fprq2 Times New Roman CE;}{\f17\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f19\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f20\froman\fcharset162\fprq2 Times New Roman Tur;}{\f21\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f106\fswiss\fcharset238\fprq2 Tahoma CE;}{\f107\fswiss\fcharset204\fprq2 Tahoma Cyr;}{\f109\fswiss\fcharset161\fprq2 Tahoma Greek;}
+{\f110\fswiss\fcharset162\fprq2 Tahoma Tur;}{\f111\fswiss\fcharset186\fprq2 Tahoma Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;
+\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar\adjustright 
+\fs20\cgrid \snext0 Normal;}{\s1\keepn\widctlpar\adjustright \b\i\cgrid \sbasedon0 \snext0 heading 1;}{\s2\keepn\widctlpar\adjustright \cgrid \sbasedon0 \snext0 heading 2;}{\s3\keepn\widctlpar\adjustright \i\cgrid \sbasedon0 \snext0 heading 3;}{\*\cs10 
+\additive Default Paragraph Font;}{\s15\widctlpar\adjustright \cgrid \sbasedon0 \snext15 Body Text;}{\*\cs16 \additive \ul\cf2 \sbasedon10 Hyperlink;}{\s17\li720\widctlpar\adjustright \cgrid \sbasedon0 \snext17 Body Text 2;}{\s18\widctlpar\adjustright 
+\cbpat9 \f15\fs20\cgrid \sbasedon0 \snext18 Document Map;}}{\*\listtable{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 
+\fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1979070182}{\list\listtemplateid-942665380\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li1800
+\jclisttab\tx1800 }{\listname ;}\listid2078361990}}{\*\listoverridetable{\listoverride\listid1979070182\listoverridecount0\ls1}{\listoverride\listid2078361990\listoverridecount0\ls2}}{\info{\title Level Design Guidelines}{\subject LUC}{\author Lisa Moore}
+{\keywords Level design description LUC suspension}{\doccomm Guidlines for designing levels for LUC Q2 game engine project.  Last updated 8/18/99.}{\operator drake o'brien}{\creatim\yr1999\mo11\dy23\min28}{\revtim\yr1999\mo11\dy23\min28}{\version2}
+{\edmins0}{\nofpages7}{\nofwords2405}{\nofchars13710}{\*\company Suspension Software}{\*\category design document}{\nofcharsws16836}{\vern113}}\widowctrl\ftnbj\aenddoc\formshade\viewkind4\viewscale100\pgbrdrhead\pgbrdrfoot \fet0\sectd 
+\linex0\endnhere\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \widctlpar\outlinelevel0\adjustright \fs20\cgrid {\b\fs32 Level Design Guidelines}{
+
+\par }\pard \widctlpar\adjustright {6/30/98
+\par Last revision 8/18/99
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\fs24 I  }{\b\fs28 Submissions}{\b\fs24 
+\par }\pard \widctlpar\adjustright {\b\fs24 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Build schedule}{\b\fs24 
+\par }\pard \widctlpar\adjustright {\fs24 In order to insure continuing work on the project, level submissions must be made weekly.  There will be a pak build at this time, which will be uploaded to our FTP site.  Submissions are to be sent to }
+{\field{\*\fldinst {\fs24  HYPERLINK "mailto:" }{{\*\datafield 00d0c9ea79f9bace118c8200aa004ba90b0200000003000000e0c9ea79f9bace118c8200aa004ba90b100000006d00610069006c0074006f003a000000000000}}}{\fldrslt {\cs16\ul\cf2 
+Drake O'Brien, dobrien@lightspeed.bc.ca}}}{\fs24  by 12PM PST on every Monday.  If you are having problems getting your builds done on time, please let Drake know and give an estimate of when you will get in y
+our submission.  When a build is done or anything has been uploaded, it will be announced on the lucteam mailing list [lucteam@nstc.com], along with the filename(s) of the new file(s).  New submissions will be uploaded when received.  Upload when you feel
+ 
+significant work has been done.  You need not wait until the build is due, however you must upload some work at least twice/month.  If you continually miss deadlines, this will be ground for dismissal from the project.  If you are going to be out of town,
+ or otherwise unavailable, let us know.  We understand about problems and commitments that arise, however, we do require that you keep us informed}{\fs22 .  If you are having connection problems for an extended period of time
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Naming conventions
+\par 
+\par }{\fs24 Name your level with your intials, the unit#, a letter signifying the place in the unit and a build number.  For example a level by Lisa Moore that is the 2}{\fs24\super nd}{\fs24  level in the 2}{\fs24\super nd}{\fs24  unit and is the 3}{
+\fs24\super rd}{\fs24  submitted build for this level would be named.
+\par 
+\par Lm2b_03}{\fs22 
+\par }\pard \widctlpar\adjustright {\fs22 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 What to include}{\fs22 
+\par }{\fs24 Your submissions should include the following and be in zipped form
+\par }\pard \widctlpar\adjustright {\fs24 
+\par 1.  bsp file 
+\par 
+\par 2.  map file
+\par 
+\par 3.  txt file explaining the area/level, where it fits in the pak.  A list of utilities, used with version numbers and special settings/options, should be included 
+in this file.  If you know of problems or items that needs work, write it down.  If you want an opinion on something in the level... write it down or better yet add items to the .txt file as you go, putting the newest info at the top.  Date each entry and
+ list the version of the map it pertains to.
+\par 
+\par 4  sounds resources text file.  Keep a list of sounds currently used in your level and where they are used.  If you are using dummy names, put them in so our sound guru can test out new sounds.  If you have a ne
+ed for a sound, describe it and mention the dummy name you have used.  As our stock of custom sounds grows, we will no doubt start to adopt certain sounds for specific purposes, i.e. a generic conveyor sound or laser sound.  Until then, play around with w
+hat we have and feel free to suggest any new sound you may need.
+\par }{\b\fs24 
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\fs28 II Resource use}{\b\fs24 
+\par }\pard \widctlpar\adjustright {\b\fs24 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Textures and Sounds}{\fs24 
+\par }\pard \widctlpar\adjustright {\fs24 We will only be using }{\b\fs24 completely original}{\fs24  textures and sounds in this pak.  We have a large base of textures and sounds to start work with, get to know t
+hem and learn how to use them together.  We are using a modified palette, so any id textures/skins will have blue spots. Don\rquote t use them :).  Be original.  Any specific texture requests/problem reports should go through }{\b\i\fs24 
+Drake O'Brien; dobrien@lightspeed.bc.ca}{\fs24  Sound related requests/reports should go to }{\b\i\fs24 Jonathan El-bizri}{\fs24  (biz)}{\b\i\fs24 , jonathan@full-moon.com}{\fs24 
+\par 
+\par }\pard\plain \s15\widctlpar\adjustright \cgrid {Some textures will be reserved for use in certain units.  When this happens you will be informed and a notation will be added here.  The same may apply to sounds.
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24 
+\par }{\i\fs24 Restricted textures:  }{\fs24 All textures in the \ldblquote 
+dmonly" subdir are for use in dm levels only.  They are human made brick type textures and are not appropriate to this pak.  Please do not use these textures in regular single player levels without prior permission.  If you have these textures in your 
+\ldblquote bricks\rdblquote  subdirectory, please remove them.
+\par }{\b\fs24 
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Prefabs
+\par }\pard \widctlpar\adjustright {\b\fs24 
+\par }{\fs24 As anyone with Quake editing experience will know, the use of prefabs is a very important for speed of building levels and for giving a consistent feel to level or group of levels.  Of course you don\rquote 
+t want to over do it, but use as needed and most importantly submit prefab areas for upload.  Please place your prefabs at 0,0,0 for ease of importation.  If you have made something that you can\rquote t use in your area, but you think it\rquote 
+s cool, prefab and upload it anyway.  There is no reason for any good work to go to waste.  Even if it is not directly used it may be able to be modified or may be an inspiration for something else.
+\par 
+\par All prefabs for this pak }{\b\fs24 MUST}{\fs24  be original.  It is OK to get ideas from other levels/prefabs, but anything we make must not be a direct copy of someone else\rquote s work.  Again, be original.
+\par 
+\par Since Quake2 is a unit based game, there is an opportunity to have areas do double duty.  You may want to mak
+e some of your areas visible to different levels, but not yet accessible.  If you are working on a unit with another person, you will want to prefab this area and upload 
+\par 
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\fs28 III Level construction
+\par }\pard \widctlpar\adjustright {\b\fs28 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Testing
+\par }\pard \widctlpar\adjustright {\b\i\fs24 
+\par }{\fs24 Although we have procedures in place for testing levels, you will be ultimately responsible for testing/fixing your own levels and in responding to feedback from other team members.  Q2 levels take a long time to build, so tweak them as you go.
+
+\par 
+\par All levels must be tested in both GL and software modes, sho
+uld run acceptably in both modes and be free of visual glitches in both modes.  If you are currently working without a GL card or your level has not yet been lighted for GL, please note it in your text file.}{\b\fs24 
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Lighting
+\par }\pard \widctlpar\adjustright {\b\i\fs24 
+\par }{\fs24 Not much to say here.  Just don\rquote t overdo colored lighting.  It should be used to make a statement.  Lighting motif should be consistent throughout a given level/unit just as texture use should be.}{\b\fs24 
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Sounds
+\par }\pard \widctlpar\adjustright {\b\i\fs24 
+\par }{\fs24 Sound is a very important aspect in any well designed game.  Use sound and silence so as to make an impact.  We hope to have \ldblquote signature\rdblquote 
+ sounds that will be used for certain events or to coupled with visual clues.  We have made a sound sequencer to assist in making complex sound sequences.  By using this, we can make simple scripted music se
+quences which can be imported into our levels.  We also have an entity which will allow us to turn cd-tracks on and off and to switch tracks.  These tracks are in development.
+\par 
+\par }\pard\plain \s1\keepn\widctlpar\outlinelevel0\adjustright \b\i\cgrid {Custom Entities
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\b\i\fs24 
+\par }\pard\plain \s15\widctlpar\adjustright \cgrid {Here\rquote s a list of the custom entities that have so far been pro
+duced for this TC.  A * signifies that this is a modified id entity.  Others are new to this pak.  This list does not yet include deco items.
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24 
+\par }{\i\fs24 target_speaker_sequencer
+\par \tab }{\fs24 This entity can be used to trigger a sequence of events.  It was primarily made for \tab 
+\par }\pard\plain \s17\li720\widctlpar\adjustright \cgrid {use with }{\i target_speakers}{ or in place of target speakers (in single speaker mode (SSM).  (see also }{\i func_event_sequencer}{)
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24 
+\par }{\i\fs24 func_CD
+\par }\pard \li720\widctlpar\adjustright {\fs24 Fixed sized entity used to turn a given cd-track on and off.   It loops by default.  You must turn it off it you want it to play once.   Can also play off a directory of music on your hard drive.
+\par }\pard \widctlpar\adjustright {\fs24 
+\par }{\i\fs24 func_door* and func_button*  }{\fs24 Added additional sounds.
+\par }{\i\fs24 
+\par func_event_sequencer
+\par }\pard \li720\widctlpar\adjustright {\fs24 Used to trigger a sequence of events.  Think of it as a multiple variable timer.
+\par Default is for it to stop after the sequence has been triggered once.  There is a repeat spawnflag if you want to have a looping sequence.
+\par 
+\par }\pard \widctlpar\adjustright {\i\fs24 func_laser*\tab 
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {\fs24 
+This entity has been modified so that both ends of the laser can move.  Use the \ldblquote pathtarget\rdblquote  key to point to what you want the origin to follow and the \ldblquote target\rdblquote 
+ key for what the end should follow.  Alternatively use pathtarget and a direction.
+\par {\pntext\pard\plain\f3\cgrid \loch\af3\dbch\af0\hich\f3 \'b7\tab}}\pard \fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlblt\ilvl0\ls1\pnrnot0\pnf3\pnstart1\pnindent360\pnhang{\pntxtb \'b7}}\ls1\adjustright {\fs24 
+Laser colors can now be set to any color in the palette.  The lasers can also now be set to cycle through a range of colors and flicker.
+\par }\pard \widctlpar\adjustright {\fs24 
+\par }{\i\fs24 func_teleport
+\par }\pard \li720\widctlpar\adjustright {\fs24 Variable sized teleport.  Similar to Q1 teleport in use.  Target these at }{\i\fs24 info_null}{\fs24  brushes or at a }{\i\fs24 func_wall}{\fs24 
+ the same size.  This entity was primarily designed so that levels could be split.  You can set it so that it is silent and the player will maintain momentum when teleporting.  
+\par 
+\par NEW:  If you target the }{\i\fs24 func_teleport}{\fs24  at a }{\i\fs24 func_wall }{\fs24 of the same size and relative orientation as the original teleport then the player will teleport to the same spot of the teleport as they teleported from.  This wil
+l give seamless transition between identical looking areas and can be used to split large complex areas, thus reducing r_speeds and allowing for more complex architecture while maintaining reasonable speed.  This can only be used in single player levels. 
+ All enemies can also be teleported, the same as with the }{\i\fs24 func_boxcar}{\fs24 , except while staying in the same level.
+\par }\pard \widctlpar\adjustright {\fs24 
+\par }{\i\fs24 waypoint
+\par \tab }{\fs24 Used for setting attack and retreat paths for select enemies (listed below).  Will \tab also definitely be added to the warlord class starting in late section 2 of the pak.
+\par }\pard\plain \s17\li720\widctlpar\adjustright \cgrid {Current waypointable enemies are\'85 }{\i repeater, monster_ambush_}{ and }{\i monster_battle_.}{
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\fs24 
+\par }{\i\fs24  func_boxcar}{\fs24 :  
+\par }\pard \li720\widctlpar\adjustright {\fs24 To be used with the changelevel entity.  Like the advanced
+\par func_teleport (see above), this will move items and enemies from start to
+\par destination, except in this case the movement will be from one level to
+\par another, like in Half-Life.  Anything within this brush will go with the
+\par player.  The }{\i\fs24 func_boxcar}{\fs24  must be targeted at another (destination)
+\par }{\i\fs24 func_boxcar}{\fs24  of the same size and relative orientation as the original, as
+\par with the }{\i\fs24 func_teleport}{\fs24 , in the destination map.   Unlike the }{\i\fs24 func_teleport}{\fs24 ,
+\par which gives instantaneous and invisible movement, there is a pause for
+\par }{\i\fs24 func_boxcar}{\fs24  as the new destination level loads..
+\par }\pard \widctlpar\adjustright {\fs24 
+\par }\pard\plain \s1\keepn\widctlpar\outlinelevel0\adjustright \b\i\cgrid {\ul Enemies
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {
+\par }\pard\plain \s2\keepn\widctlpar\outlinelevel1\adjustright \cgrid {A \ldblquote pacifist\rdblquote  spawnflag has been added for all enemies.  When this flag is set, the enemy will not attack unless either provoked or directed to attack by a supervisor.  
+
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {
+\par }{\i\fs24 monster_battle_bolt (_disk)
+\par }\pard \fi720\widctlpar\adjustright {\fs24 Waypointable, biped, slow and carries 2 guns (bolt or diskguns).  }{ }{\fs24 Still very beta.
+\par }\pard\plain \s15\widctlpar\adjustright \cgrid {
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\i\fs24 monster_ambush_bolt (_disk)
+\par }\pard \fi720\widctlpar\adjustright {\fs24 Waypointable, fast biped, carries 1 gun (bolt or diskgun).  Still very beta
+\par }\pard\plain \s15\widctlpar\adjustright \cgrid {
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\i\fs24\cf1 monster_bot_fatman 
+\par }\pard\plain \s2\li720\keepn\widctlpar\outlinelevel1\adjustright \cgrid {\cf1 Rogue enemy.  This is a large floating Creature which fires little_boys.  He has a high health value (currently 800 but not yet balanced).  First appears near the end of the 1}{
+\cf1\super st}{\cf1  section (unit2).
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\cf1 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \i\cgrid {monster_bot_gbot 
+\par }\pard\plain \s15\li720\widctlpar\adjustright \cgrid {\cf1 Small flyer which shoots rapid-fire bullets.  Low health but fairly difficult to hit.  These enemies appear early in the pak.
+\par }\pard\plain \widctlpar\adjustright \fs20\cgrid {\cf1 
+\par }\pard\plain \s3\keepn\widctlpar\outlinelevel2\adjustright \i\cgrid {monster_bot_workerbeam, monster_bot_workerclaw, monster_bot_workercoil 
+\par }\pard\plain \li720\widctlpar\adjustright \fs20\cgrid {\fs24\cf1 
+3 enemies using the same body with different heads and attack modes.  They are introduced early in the pak.  4-legged and rather awkward.  Best used in groups.  These enemies were designed to be used with the }{\i\fs24\cf1 monster_bot_supervisor
+\par }\pard \widctlpar\adjustright {\i\fs24\cf1 
+\par monster_gwhite
+\par }\pard\plain \s15\li720\widctlpar\adjustright \cgrid {\cf1 
+This enemy is not affiliated.  Should be used only in deep water and large areas and singly.  It will consume jellies for health.  This enemy uses random movement and will not follow path_ corners.  It is used early on for ambience.
+\par }\pard \s15\widctlpar\adjustright {\cf1 
+\par }{\i\cf1 monster_littleboy
+\par }\pard \s15\li720\widctlpar\adjustright {\cf1 Fired by }{\i\cf1 fatman }{\cf1 enemies.  They can also be used alone.  They hover while they  search for the player and then will head in player\rquote 
+s direction at speed.  Does not change direction in flight.
+\par 
+\par }\pard \s15\widctlpar\adjustright {\i\cf1 monster_repeater }{\cf1 
+\par }\pard \s15\li720\widctlpar\adjustright {\cf1 Fairly low health, 2 legged.  Fires medium speed shotgun shots.  Can be put on waypoints.  This enemy first shows up in lm2s.
+\par }\pard \s15\widctlpar\adjustright {\cf1 
+\par }{\i\cf1 monster_supervisor}{\cf1  }{\i\cf1 
+\par }\pard \s15\li720\widctlpar\adjustright {\cf1 This enemy will awaken enemies within a given radius, even those that are \ldblquote pacifist\rdblquote , and order them to attack.  It is a fairl
+y fast flyer that shoots blaster bolts.   It will recharge injured enemies within its radius.  It makes its first appearance in lm2b.
+\par }\pard \s15\widctlpar\adjustright {\cf1 
+\par }{\i\cf1 monster_turret_static }{\cf1 
+\par }\pard \s15\li720\widctlpar\adjustright {\cf1 Attach this enemy to a wall, floor or ceiling by giving it a direction toward the wall you want it to be attached to.  Shoots double blaster bolts.  This enemy can be disabled, ie triggered on and off.
+\par }\pard \s15\widctlpar\adjustright {\cf1 
+\par }\pard \s15\widctlpar\outlinelevel0\adjustright {\b\i\ul\cf1 Weapons}{\b\i\cf1  (weapon_ )
+\par }\pard \s15\widctlpar\adjustright {\b\i\ul\cf1 
+\par }\pard \s15\widctlpar\outlinelevel0\adjustright {\i\cf1 Knife:  }{\cf1 Default weapon.  Pointblank range.
+\par }\pard \s15\widctlpar\adjustright {\cf1 
+\par }{\i\cf1 speargun}{\cf1 :  Shoots }{\i\cf1 spears}{\cf1  and }{\i\cf1 rocketspears}{\cf1 .  There is an arc out of water on spears.  Normal spears are retrievable.  Short to medium range weapon\'85 longer range for rocketspears.
+\par 
+\par }{\i\cf1 diskgun}{\cf1 :  Shoots bouncing energy objects.  Radius damage and direct damage.  There is some randomness to the amount of damage done.  Short-med range, perhaps longer.
+\par 
+\par }{\i\cf1 Plasmawad:  }{\cf1 Shoots }{\i\cf1 plasma}{\cf1 
+.  The plasma will attach itself to a surface and then will fling itself at an enemy when it gets into range.  The amount of ammo used and the distance the plasma is thrown is relative to the amount to time the trigger is held d
+own.  The amount of time that the plasma stays is inversely relative to the amount of time the trigger is held down.  
+\par 
+\par }{\i\cf1 Boltgun:  }{\cf1 Uses }{\i\cf1 bolts}{\cf1  as ammo.  Machinegun-like weapon.  Shoots in a back and forth pattern.  If the trigger is held down the gun will he
+at up and start to malfunction and eventually will stop working all together.  The gun will work again after it has cooled down.  Currently beta.
+\par 
+\par }{\i\cf1 Matrix:  }{\cf1 This weapon will only fire when there is an enemy in range.  It will find the healthiest enemy in range and will envelop it.  It will kill any enemy.  It will use very large amounts of }{\i\cf1 plasma}{\cf1 
+ in its final form.  Currently very beta.  It has a blast radius that diminishes with distance.
+\par 
+\par }\pard \s15\widctlpar\outlinelevel0\adjustright {\b\i\ul\cf1 Ammo }{\b\i\cf1 (ammo_ )
+\par }\pard \s15\widctlpar\adjustright {\b\i\ul\cf1 
+\par }{\i\cf1 disks:  }{\cf1 Cartridge of 10 plasma disks for diskgun
+\par 
+\par }{\i\cf1 plasma:}{\cf1   For use with plasmawad and matrix guns.  10 units of plasma/bundle.  This ammo is produced by the worker_coil enemies.  In most cases this ammo should be given to the player by this enemy.  They could also be in a coil \ldblquote 
+nest\rdblquote .
+\par 
+\par }{\i\cf1 bolts:  }{\cf1 for boltgun.
+\par 
+\par spears: Pack of spears.  Player starts with some.  They are retrievable, so they should only be given to the player very rarely to replace those that will be lost in lava, stuck in ceilings, etc.  Used in speargun.
+\par 
+\par rocketspears:  Used in speargun.
+\par 
+\par }\pard \s15\widctlpar\outlinelevel0\adjustright {\b\i\ul\cf1 Health
+\par }\pard \s15\widctlpar\adjustright {\b\i\ul\cf1 
+\par }{\i\cf1 monster_jelly:  U}{\cf1 nderwater health source.  Currently  worth 10%.  Sharks can eat them if they are hurt.  Jellies have a health of 200\'85
+ they can be killed.  They glow when hurt and will regenerate.  They move randomly and will avoid the player.  Will not be picked up unless player is down to 90% health.
+\par 
+\par monster_landjelly:  Same as jelly except used on land and worth 20% health bonus.
+\par 
+\par }{\i\cf1 item_berry1, _berry2:  }{\cf1 Health items for use in deathmatch.  Berry1 is worth 10%, Berry2 is worth 20% health bonus.
+\par 
+\par 
+\par }\pard \s15\widctlpar\outlinelevel0\adjustright {\b\i\ul\cf1 Items/Misc
+\par }\pard \s15\widctlpar\adjustright {\b\i\ul\cf1 
+\par }{\i\cf1 misc_bubblegen1:  }{\cf1 A bubble generator (doh! ;)).  The speed, duration and time between bubbles are all variable.  Be careful, too many bubbles can cause an error condition.
+\par 
+\par }{\i\cf1 monster_kelp_large and monster_kelp_small:  }{\cf1 They\rquote re just plants, although very cool.  They sway when something goes through them or when shot. 
+\par 
+\par }{\i\cf1 item_deco:
+\par }{\cf1 For use in developing deco models/items by non-programmers.  It\rquote s basically allows plug-in deco items.  Items can be animated.  To use put the item you want in the \ldblquote message\rdblquote  key field.
+\par 
+\par }{\i\cf1 light_ceil1, _ceil2, _wall1, _wall2, _wall3, _floor1:
+\par }{\cf1 light models that can be used in place of point lights.  They are \ldblquote killable\rdblquote .  You must give them a health value and a style.  All lights of the same style will go out when one is killed.  If 
+you do not give them a style then all lights in the level will go out, including texture lights.
+\par 
+\par 
+\par 
+\par }\pard\plain \widctlpar\outlinelevel0\adjustright \fs20\cgrid {\b\i\fs24\cf1 Entity targetnames
+\par }\pard \widctlpar\adjustright {\b\i\fs24\cf1 
+\par }{\fs24\cf1 Since events can be triggered across levels in a unit.  Use unique key/values.  Start the values with your first and last initials, unit
+ number and a description of the event.  Remember that people working together on a unit will have to be able to communicate these values to each other.  So name them something you will remember.
+\par 
+\par }{\i\fs24\cf1 Example:
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\fs24\cf1 A set of switched lasers in lmunit2b might have a key/value something like this
+\par }\pard \widctlpar\adjustright {\fs24\cf1 
+\par }{\i\fs24\cf1 target/lm2b_lasertarget1 
+\par 
+\par }{\fs24\cf1   or better yet
+\par 
+\par }{\i\fs24\cf1 target/lm2b_lasertarget1_tunnel
+\par }{\b\fs24\cf1 
+\par 
+\par }{\b\i\fs24\cf1 r_speeds
+\par 
+\par }{\fs24\cf1 Minimum target machine requirements are a P166 with 32 MB memory in software mode.  Preferred machine would be a low end PII or 3dfx car
+d.  As a rule of thumb, keep your r_speeds relatively low for high action areas (w-poly=450 or lower).  Higher r_speeds are acceptable for low action, connecting areas that are mostly there for a \ldblquote wow\rdblquote 
+ factor.  However under NO circumstances should you eve
+r see dropped faces or should items disappear in software mode.  If you know there is a problem with this in a current build, note it in your text file so that others know you are aware of the problem and don\rquote t spend time commenting on it.
+\par 
+\par NOTE:  It is very likely that we will end up requiring hardware acceleration of some sort, so you can push r_speeds somewhat.  However, try to keep faces or entities from dropping out in software.  Lighting should be weighted toward hardware rendering.
+
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\fs28 IV Contact List
+\par }\pard \widctlpar\adjustright {\b\fs28 
+\par }{\fs24 The following people should be contacted for requests/questions/comments concerning their various departments. (* designates project leadership)
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Level Design}{\fs24 
+\par }\pard \widctlpar\adjustright {\fs24 *Lisa Moore (Madpup)\tab 75102.1366@compuserve.com
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 2D graphics/builds
+\par }\pard \widctlpar\adjustright {\fs24 *Drake O'Brien (zondrero)\tab dobrien@lightspeed.bc.ca
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Sound effects
+\par }\pard \widctlpar\adjustright {\fs24 Jonathan El-bizri (biz)\tab \tab jonathan@full-moon.com
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 AI/game logic}{\fs24 
+\par }\pard \widctlpar\adjustright {\fs24 Rand Phares\tab \tab \tab rsphares@yahoo.com
+\par 
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Models/3D graphics\tab \tab 
+\par }\pard \widctlpar\adjustright {\fs24 Mike Bristol () \tab \tab  mbristol@tp.net
+\par }\pard \widctlpar\outlinelevel0\adjustright {\b\i\fs24 Mailing lists/ftp
+\par }\pard \widctlpar\adjustright {\fs24 John Minadeo}{\b\i\fs24 \tab \tab \tab }{\fs24 jminadeo@nforce.com
+\par }{
+\par }}

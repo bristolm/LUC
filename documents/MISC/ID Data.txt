@@ -1,0 +1,50 @@
+Id's Monster Hit Points
+
+soldier_light     20
+soldier           30
+soldier_ss        40
+flipper           50
+flyer             50
+infantry         100
+insane           100
+chick            175
+gunner           175
+parasite         175
+floater          200
+berserk          240
+hover            240
+medic            300
+mutant           300
+brain            300
+gladiator        400
+tank             750
+tank_commander  1000
+supertank       1500
+boss2           2000
+jorg            3000
+makron          3000
+boss3            N/A
+
+
+Id Health Items
+
+player           100
+health            10
+health_small       2
+health_large      25
+health_mega      100
+
+
+Id's Weapon Strength
+
+blaster           10
+hyperblaster      20
+shotgun           48
+machinegun         8 per bullet
+chaingun           8 per bullet
+rocketlauncher   100-120 (varies)
+supershotgun     120
+grenadelauncher  120
+grenade          125
+railgun          150
+bfg              200
